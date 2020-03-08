@@ -1,5 +1,5 @@
 {
-  "name": "koronavirus-fe",
+  "name": "coronamap-fe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,6 +23,12 @@
     "next": "^9.2.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-simple-maps": "^1.0.0-beta.0",
+    "styled-components": "^5.0.1",
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.0",
+    "@types/react": "^16.9.23"
   }
 }
