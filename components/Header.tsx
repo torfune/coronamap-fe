@@ -1,10 +1,15 @@
 import styled from 'styled-components'
 import { BP } from '../constants'
+import Link from 'next/link'
 
 const Header = () => (
   <Container>
-    <img src="logo.svg" />
-    <h1>CoronaMap.app</h1>
+    <Link href="/">
+      <a>
+        <img src="logo.svg" />
+        <h1>CoronaMap.app</h1>
+      </a>
+    </Link>
   </Container>
 )
 
@@ -17,6 +22,13 @@ const Container = styled.div`
   align-items: center;
   z-index: 10;
   opacity: 0.9;
+
+  a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: #fff;
+  }
 
   img {
     height: 40px;
