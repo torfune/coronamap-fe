@@ -16,19 +16,27 @@ function splitByAverage(numbers: number[], average: number) {
   return result
 }
 
-function getChunks(numbers: number[], count: number) {
+function getFourChunks(numbers: number[]) {
+  const breakpoints: number[] = []
   let chunks = [numbers]
 
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < 2; i++) {
     let newChunks: number[][] = []
     for (const chunk of chunks) {
-      const average = getAverage(chunk)
+      const average = Math.round(Math.round(getAverage(chunk)) / 10) * 10
+      if (!breakpoints[1]) {
+        breakpoints[1] = average
+      } else if (!breakpoints[0]) {
+        breakpoints[0] = average
+      } else {
+        breakpoints[2] = average
+      }
       newChunks = [...newChunks, ...splitByAverage(chunk, average)]
     }
     chunks = newChunks
   }
 
-  return chunks
+  return { chunks, breakpoints }
 }
 
-export default getChunks
+export default getFourChunks

@@ -1,5 +1,5 @@
 export const COLOR = {
-  MAP_FILL: ['#FF8D73', '#F36848', '#E84018', '#B72B0A'],
+  MAP_FILL: ['#FFE7A7', '#fbc531', '#f39c12', '#e84118'],
   MAP_CHINA: '#400C00',
   MAP_BACKGROUND: '#fff',
   MAP_BORDER: '#2f2f2f',

@@ -29,7 +29,7 @@ export default () => {
   )
 }
 
-const StyledLabel = styled.h2`
+const StyledLabel = styled.h3`
   font-size: 18px;
   margin-bottom: 32px;
 
