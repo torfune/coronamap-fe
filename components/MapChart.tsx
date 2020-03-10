@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import getFourChunks from '../utils/getFourChunks'
 import { COLOR, GEO_URL, BP } from '../constants'
 import MapLegend from './MapLegend'
-import MapInfo from './MapInfo'
+import DataInfo from './DataInfo'
 
 interface Props {
   countries?: Country[]
@@ -57,7 +57,7 @@ const MapChart: FC<Props> = ({ countries }) => {
       </ComposableMap>
 
       <BottomLine>
-        <MapInfo updatedAt={new Date(2020, 2, 8)} />
+        <DataInfo updatedAt={new Date(2020, 2, 8)} />
         <MapLegend breakpoints={breakpoints} />
       </BottomLine>
     </>

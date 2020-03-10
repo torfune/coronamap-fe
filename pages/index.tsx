@@ -5,6 +5,7 @@ import MapChart from '../components/MapChart'
 import Header from '../components/Header'
 import styled from 'styled-components'
 import { BP } from '../constants'
+import Stats from '../components/Stats'
 
 export default () => {
   const [countries, setCountries] = useState<Country[]>()
@@ -24,6 +25,9 @@ export default () => {
       <Content>
         <StyledLabel>Confirmed cases worldwide</StyledLabel>
         <MapChart countries={countries} />
+
+        <StyledLabel>Situation in numbers</StyledLabel>
+        <Stats />
       </Content>
     </>
   )
@@ -31,7 +35,8 @@ export default () => {
 
 const StyledLabel = styled.h3`
   font-size: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  margin-top: 80px;
 
   @media (max-width: ${BP.MOBILE}) {
     font-size: 16px;
@@ -39,10 +44,10 @@ const StyledLabel = styled.h3`
   }
 `
 const Content = styled.div`
-  padding: 128px 64px;
+  padding: 48px 64px;
   min-height: 2000px;
 
   @media (max-width: ${BP.MOBILE}) {
-    padding: 96px 24px;
+    padding: 24px 24px;
   }
 `

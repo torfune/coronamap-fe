@@ -5,7 +5,7 @@ import { BP } from '../constants'
 interface Props {
   updatedAt: Date
 }
-const MapInfo: FC<Props> = ({ updatedAt }) => (
+const DataInfo: FC<Props> = ({ updatedAt }) => (
   <Container>
     <p>Updated: {updatedAt.toLocaleDateString()}</p>
     <span>|</span>
@@ -35,4 +35,4 @@ const Container = styled.div`
   }
 `
 
-export default MapInfo
+export default DataInfo
