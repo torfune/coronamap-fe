@@ -1,17 +1,25 @@
 import { FC, useEffect, useState } from 'react'
 import GeoData from '../types/GeoData'
 import Country from '../types/Country'
-import { Geography, ComposableMap, Geographies } from 'react-simple-maps'
+import {
+  Geography,
+  ComposableMap,
+  Geographies,
+  ZoomableGroup,
+} from 'react-simple-maps'
 import styled from 'styled-components'
 import getFourChunks from '../utils/getFourChunks'
 import { COLOR, GEO_URL, BP } from '../constants'
 import MapLegend from './MapLegend'
 import DataInfo from './DataInfo'
+import ReactTooltip from 'react-tooltip'
+import shade from '../utils/shade'
 
 interface Props {
   countries?: Country[]
 }
 const MapChart: FC<Props> = ({ countries }) => {
+  const [tooltip, setTooltip] = useState('')
   const [breakpoints, setBreakpoints] = useState<number[]>([])
   const [countryColor, setCountryColor] = useState<{
     [key: string]: string
@@ -40,36 +48,62 @@ const MapChart: FC<Props> = ({ countries }) => {
 
   return (
     <>
-      <ComposableMap viewBox="40 70 800 412">
+      <ComposableMap
+        data-tip=""
+        data-background-color="#333"
+        viewBox="40 70 800 412"
+      >
         <Geographies geography={GEO_URL.WORLD}>
           {({ geographies }: { geographies: GeoData[] }) =>
-            geographies.map(geo => (
-              <StyledGeography
-                key={geo.rsmKey}
-                geography={geo}
-                fill={
-                  countryColor[geo.properties.ISO_A2] || COLOR.MAP_BACKGROUND
-                }
-              />
-            ))
+            geographies.map(geo => {
+              const countryCode = geo.properties.ISO_A2
+              const color = countryColor[countryCode] || '#ffffff'
+              const country = countries?.find(c => c.code === countryCode)
+
+              return (
+                <StyledGeography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  onMouseEnter={() => {
+                    setTooltip(
+                      `${geo.properties.NAME} - ${(
+                        country?.confirmedCases || 0
+                      ).toLocaleString()}`
+                    )
+                  }}
+                  onMouseLeave={() => {
+                    setTooltip('')
+                  }}
+                  style={{
+                    default: {
+                      fill: color,
+                    },
+                    hover: {
+                      fill: shade(color, -15),
+                    },
+                    pressed: {
+                      fill: shade(color, -15),
+                    },
+                  }}
+                />
+              )
+            })
           }
         </Geographies>
       </ComposableMap>
 
       <BottomLine>
-        <DataInfo updatedAt={new Date(2020, 2, 8)} />
+        <DataInfo updatedAt={new Date(2020, 2, 10)} />
         <MapLegend breakpoints={breakpoints} />
       </BottomLine>
+
+      <ReactTooltip>{tooltip}</ReactTooltip>
     </>
   )
 }
 
-interface StyledGeographyProps {
-  fill: string
-}
-const StyledGeography = styled(Geography)<StyledGeographyProps>`
-  fill: ${props => props.fill};
-  transition: 400ms ease-out;
+const StyledGeography = styled(Geography)`
+  transition: 150ms;
   stroke: #000;
   stroke-width: 0.1px;
   outline: 0;

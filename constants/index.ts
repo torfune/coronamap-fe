@@ -1,7 +1,7 @@
 export const COLOR = {
   MAP_FILL: ['#FFE7A7', '#fbc531', '#f39c12', '#e84118'],
   MAP_CHINA: '#400C00',
-  MAP_BACKGROUND: '#fff',
+  MAP_BACKGROUND: '#ffffff',
   MAP_BORDER: '#2f2f2f',
 }
 

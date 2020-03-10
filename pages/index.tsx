@@ -15,7 +15,7 @@ export default () => {
   }, [])
 
   const fetchData = async () => {
-    const response = await Axios.get('data/08-03-20.json')
+    const response = await Axios.get('data/10-03-20.json')
     setCountries(response.data)
   }
 

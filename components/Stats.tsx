@@ -8,26 +8,26 @@ const Stats = () => (
     <Container>
       <div>
         <h4>TOTAL CASES</h4>
-        <CountUp end={105586} duration={1} separator="," delay={0}>
+        <CountUp end={113702} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
 
       <div>
         <h4>DEATHS</h4>
-        <CountUp end={3584} duration={1} separator="," delay={0}>
+        <CountUp end={4012} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
 
       <div>
         <h4>RECOVERED</h4>
-        <CountUp end={64750} duration={1} separator="," delay={0}>
+        <CountUp end={65105} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
     </Container>
-    <DataInfo updatedAt={new Date(2020, 2, 8)} />
+    <DataInfo updatedAt={new Date(2020, 2, 10)} />
   </>
 )
 
