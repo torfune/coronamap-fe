@@ -734,5 +734,13 @@
     "totalDeaths": 0,
     "newDeaths": 0,
     "daysSinceLastCase": 3
+  },
+  {
+    "code": "CN",
+    "confirmedCases": 80924,
+    "newCases": 20,
+    "totalDeaths": 3140,
+    "newDeaths": 17,
+    "daysSinceLastCase": 0
   }
 ]

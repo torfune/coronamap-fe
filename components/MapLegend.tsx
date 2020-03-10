@@ -14,7 +14,7 @@ const MapLegend: FC<Props> = ({ breakpoints }) => (
     {breakpoints.map((value, index) => (
       <LegendItem key={index} color={COLOR.MAP_FILL[index + 1]}>
         <div />
-        <p>{value}+</p>
+        <p>{value.toLocaleString()}+</p>
       </LegendItem>
     ))}
   </Container>

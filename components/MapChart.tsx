@@ -30,7 +30,7 @@ const MapChart: FC<Props> = ({ countries }) => {
 
     const newCountryColor = { ...countryColor }
     const { chunks, breakpoints } = getFourChunks(
-      countries.map(c => c.confirmedCases)
+      countries.filter(c => c.code !== 'CN').map(c => c.confirmedCases)
     )
 
     for (const country of countries) {
