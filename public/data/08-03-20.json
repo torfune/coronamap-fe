@@ -1,0 +1,681 @@
+[
+  {
+    "code": "KR",
+    "confirmedCases": 7134,
+    "newCases": 367,
+    "totalDeaths": 50,
+    "newDeaths": 6,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "JP",
+    "confirmedCases": 455,
+    "newCases": 48,
+    "totalDeaths": 6,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "MY",
+    "confirmedCases": 93,
+    "newCases": 10,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "AU",
+    "confirmedCases": 74,
+    "newCases": 12,
+    "totalDeaths": 3,
+    "newDeaths": 1,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "VN",
+    "confirmedCases": 21,
+    "newCases": 4,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "PH",
+    "confirmedCases": 6,
+    "newCases": 1,
+    "totalDeaths": 1,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "NZ",
+    "confirmedCases": 5,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "KH",
+    "confirmedCases": 2,
+    "newCases": 1,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "IT",
+    "confirmedCases": 5883,
+    "newCases": 1247,
+    "totalDeaths": 234,
+    "newDeaths": 37,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "DE",
+    "confirmedCases": 795,
+    "newCases": 156,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "FR",
+    "confirmedCases": 706,
+    "newCases": 93,
+    "totalDeaths": 10,
+    "newDeaths": 1,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "ES",
+    "confirmedCases": 430,
+    "newCases": 56,
+    "totalDeaths": 5,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "CH",
+    "confirmedCases": 264,
+    "newCases": 55,
+    "totalDeaths": 2,
+    "newDeaths": 1,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "GB",
+    "confirmedCases": 210,
+    "newCases": 43,
+    "totalDeaths": 2,
+    "newDeaths": 1,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "NL",
+    "confirmedCases": 188,
+    "newCases": 60,
+    "totalDeaths": 1,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "BE",
+    "confirmedCases": 169,
+    "newCases": 60,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "SE",
+    "confirmedCases": 161,
+    "newCases": 24,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "NO",
+    "confirmedCases": 147,
+    "newCases": 34,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "AT",
+    "confirmedCases": 104,
+    "newCases": 38,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "GR",
+    "confirmedCases": 66,
+    "newCases": 34,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "IS",
+    "confirmedCases": 45,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "DK",
+    "confirmedCases": 31,
+    "newCases": 8,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "CZ",
+    "confirmedCases": 26,
+    "newCases": 14,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "IL",
+    "confirmedCases": 25,
+    "newCases": 6,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "PT",
+    "confirmedCases": 21,
+    "newCases": 8,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "FI",
+    "confirmedCases": 19,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "IE",
+    "confirmedCases": 19,
+    "newCases": 1,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "RO",
+    "confirmedCases": 13,
+    "newCases": 6,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "GE",
+    "confirmedCases": 12,
+    "newCases": 3,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "SI",
+    "confirmedCases": 12,
+    "newCases": 3,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "HR",
+    "confirmedCases": 11,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "EE",
+    "confirmedCases": 10,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "AZ",
+    "confirmedCases": 9,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "HU",
+    "confirmedCases": 7,
+    "newCases": 3,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "RU",
+    "confirmedCases": 7,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "BY",
+    "confirmedCases": 6,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 3
+  },
+  {
+    "code": "PL",
+    "confirmedCases": 6,
+    "newCases": 1,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "MK",
+    "confirmedCases": 3,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "SK",
+    "confirmedCases": 3,
+    "newCases": 2,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "BA",
+    "confirmedCases": 2,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 3
+  },
+  {
+    "code": "BG",
+    "confirmedCases": 2,
+    "newCases": 2,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "LU",
+    "confirmedCases": 2,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "AM",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 6
+  },
+  {
+    "code": "LV",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 5
+  },
+  {
+    "code": "LT",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 9
+  },
+  {
+    "code": "MD",
+    "confirmedCases": 1,
+    "newCases": 1,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "RS",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 2
+  },
+  {
+    "code": "UA",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 4
+  },
+  {
+    "code": "TH",
+    "confirmedCases": 50,
+    "newCases": 2,
+    "totalDeaths": 1,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "IN",
+    "confirmedCases": 34,
+    "newCases": 3,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "ID",
+    "confirmedCases": 4,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "BT",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 2
+  },
+  {
+    "code": "NP",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 44
+  },
+  {
+    "code": "LK",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 41
+  },
+  {
+    "code": "IR",
+    "confirmedCases": 5823,
+    "newCases": 1076,
+    "totalDeaths": 145,
+    "newDeaths": 21,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "KW",
+    "confirmedCases": 62,
+    "newCases": 4,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "IQ",
+    "confirmedCases": 54,
+    "newCases": 10,
+    "totalDeaths": 4,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "EG",
+    "confirmedCases": 48,
+    "newCases": 45,
+    "totalDeaths": 0,
+    "newDeaths": 0
+  },
+  {
+    "code": "AE",
+    "confirmedCases": 45,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "LB",
+    "confirmedCases": 28,
+    "newCases": 6,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "OM",
+    "confirmedCases": 16,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 2
+  },
+  {
+    "code": "QA",
+    "confirmedCases": 12,
+    "newCases": 1,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "SA",
+    "confirmedCases": 7,
+    "newCases": 2,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "PK",
+    "confirmedCases": 5,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 5
+  },
+  {
+    "code": "AF",
+    "confirmedCases": 4,
+    "newCases": 3,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "MA",
+    "confirmedCases": 2,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 3
+  },
+  {
+    "code": "JO",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 5
+  },
+  {
+    "code": "TN",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 5
+  },
+  {
+    "code": "US",
+    "confirmedCases": 213,
+    "newCases": 0,
+    "totalDeaths": 11,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "CA",
+    "confirmedCases": 57,
+    "newCases": 6,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "BR",
+    "confirmedCases": 19,
+    "newCases": 6,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "EC",
+    "confirmedCases": 14,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "AR",
+    "confirmedCases": 9,
+    "newCases": 7,
+    "totalDeaths": 1,
+    "newDeaths": 1,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "MX",
+    "confirmedCases": 7,
+    "newCases": 2,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "PE",
+    "confirmedCases": 6,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "CL",
+    "confirmedCases": 5,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "CR",
+    "confirmedCases": 5,
+    "newCases": 5,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "CO",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "DO",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 6
+  },
+  {
+    "code": "DZ",
+    "confirmedCases": 17,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "SN",
+    "confirmedCases": 4,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 3
+  },
+  {
+    "code": "CM",
+    "confirmedCases": 2,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  },
+  {
+    "code": "ZA",
+    "confirmedCases": 2,
+    "newCases": 1,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 0
+  },
+  {
+    "code": "NG",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 9
+  },
+  {
+    "code": "TG",
+    "confirmedCases": 1,
+    "newCases": 0,
+    "totalDeaths": 0,
+    "newDeaths": 0,
+    "daysSinceLastCase": 1
+  }
+]
