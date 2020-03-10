@@ -48,6 +48,21 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="stylesheet" href="global.css" />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-68180597-4"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-68180597-4');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
