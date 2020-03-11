@@ -40,7 +40,7 @@ class MyDocument extends Document {
           <title>Coronavirus visualized | World Map | USA Map</title>
           <meta
             name="description"
-            content="Coronavirus Visualized | Updated World Map | Updated USA Map"
+            content="Latest Coronavirus data visualized on interactive map."
           ></meta>
           <link rel="icon" href="favicon-32.png" type="image/x-icon"></link>
           <link
