@@ -1,12 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import GeoData from '../types/GeoData'
-import Country from '../types/Country'
-import {
-  Geography,
-  ComposableMap,
-  Geographies,
-  ZoomableGroup,
-} from 'react-simple-maps'
+import { Geography, ComposableMap, Geographies } from 'react-simple-maps'
 import styled from 'styled-components'
 import getFourChunks from '../utils/getFourChunks'
 import { COLOR, GEO_URL, BP } from '../constants'
@@ -14,62 +8,67 @@ import MapLegend from './MapLegend'
 import DataInfo from './DataInfo'
 import ReactTooltip from 'react-tooltip'
 import shade from '../utils/shade'
+import ColorMap from '../types/ColorMap'
+import Data from '../types/Data'
+import getUSACode from '../utils/getUSACode'
 
 interface Props {
-  countries?: Country[]
+  type: 'WORLD' | 'USA'
+  data: Data
+  source: string
+  updatedAt: Date
 }
-const MapChart: FC<Props> = ({ countries }) => {
+const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
   const [tooltip, setTooltip] = useState('')
   const [breakpoints, setBreakpoints] = useState<number[]>([])
-  const [countryColor, setCountryColor] = useState<{
-    [key: string]: string
-  }>({ CN: COLOR.MAP_FILL[3] })
+  const [colorMap, setColorMap] = useState<ColorMap>({})
 
   useEffect(() => {
-    if (!countries) return
+    const values = Object.values(data)
+    if (type === 'WORLD') {
+      values.shift()
+    }
 
-    const newCountryColor = { ...countryColor }
-    const { chunks, breakpoints } = getFourChunks(
-      countries.filter(c => c.code !== 'CN').map(c => c.confirmedCases)
-    )
+    const { chunks, breakpoints } = getFourChunks(values)
 
-    for (const country of countries) {
+    const newColorMap: ColorMap =
+      type === 'WORLD' ? { CN: COLOR.MAP_FILL[3] } : {}
+    for (const [code, value] of Object.entries(data)) {
       for (let i = 0; i < chunks.length; i++) {
-        if (chunks[i].includes(country.confirmedCases)) {
-          newCountryColor[country.code] = COLOR.MAP_FILL[i]
+        if (chunks[i].includes(value)) {
+          newColorMap[code] = COLOR.MAP_FILL[i]
           break
         }
       }
     }
 
     setBreakpoints(breakpoints)
-    setCountryColor(newCountryColor)
-  }, [countries])
+    setColorMap(newColorMap)
+  }, [data])
 
   return (
     <>
       <ComposableMap
         data-tip=""
         data-background-color="#333"
-        viewBox="40 70 800 412"
+        viewBox={type === 'WORLD' ? '40 70 800 412' : '0 55 800 500'}
+        projection={type === 'USA' ? 'geoAlbersUsa' : 'geoEqualEarth'}
       >
-        <Geographies geography={GEO_URL.WORLD}>
+        <Geographies geography={type === 'WORLD' ? GEO_URL.WORLD : GEO_URL.USA}>
           {({ geographies }: { geographies: GeoData[] }) =>
             geographies.map(geo => {
-              const countryCode = geo.properties.ISO_A2
-              const color = countryColor[countryCode] || '#ffffff'
-              const country = countries?.find(c => c.code === countryCode)
+              const { properties: gdata } = geo
+              const name = type === 'WORLD' ? gdata.NAME : gdata.name
+              const code = type === 'WORLD' ? gdata.ISO_A2 : getUSACode(name)
+              const color = colorMap[code] || '#ffffff'
+              const value = data[code]
 
               return (
                 <StyledGeography
                   key={geo.rsmKey}
                   geography={geo}
                   onMouseEnter={() => {
-                    setTooltip(
-                      `${geo.properties.NAME} - ${(
-                        country?.confirmedCases || 0
-                      ).toLocaleString()}`
-                    )
+                    setTooltip(`${name} - ${(value || 0).toLocaleString()}`)
                   }}
                   onMouseLeave={() => {
                     setTooltip('')
@@ -93,7 +92,7 @@ const MapChart: FC<Props> = ({ countries }) => {
       </ComposableMap>
 
       <BottomLine>
-        <DataInfo updatedAt={new Date(2020, 2, 10)} />
+        <DataInfo source={source} updatedAt={updatedAt} />
         <MapLegend breakpoints={breakpoints} />
       </BottomLine>
 

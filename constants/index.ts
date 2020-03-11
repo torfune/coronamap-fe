@@ -9,7 +9,14 @@ export const BP = {
   MOBILE: '576px',
 }
 
+export const SOURCE = {
+  WHO: 'World Health Organization',
+  CDC: 'Centers for Disease Control and Prevention',
+  CNN: 'CNN',
+}
+
 export const GEO_URL = {
+  USA: 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json',
   WORLD:
     'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json',
 }

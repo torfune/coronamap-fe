@@ -37,10 +37,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Coronavirus World Map</title>
+          <title>Coronavirus | World Map | USA Map</title>
           <meta
             name="description"
-            content="Coronavirus Visualized | Updated Global Map"
+            content="Coronavirus Visualized | Updated World Map | Updated USA Map"
           ></meta>
           <link rel="icon" href="favicon-32.png" type="image/x-icon"></link>
           <link

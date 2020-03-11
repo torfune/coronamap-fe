@@ -1,41 +1,49 @@
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
-import Country from '../types/Country'
 import MapChart from '../components/MapChart'
-import styled from 'styled-components'
-import { BP } from '../constants'
-import Stats from '../components/Stats'
+import Stats from '../components/GlobalStats'
+import SectionLabel from '../components/SectionLabel'
+import Data from '../types/Data'
+import { SOURCE } from '../constants'
+import createDate from '../utils/createDate'
 
 export default () => {
-  const [countries, setCountries] = useState<Country[]>()
+  const [worldData, setWorldData] = useState<Data>({})
+  const [usaData, setUsaData] = useState<Data>({})
 
   useEffect(() => {
     fetchData()
   }, [])
 
   const fetchData = async () => {
-    const response = await Axios.get('data/10-03-20.json')
-    setCountries(response.data)
+    const [worldResponse, usaResponse] = await Promise.all([
+      Axios.get('data/world/world-cases-10-03-20.json'),
+      Axios.get('data/usa/usa-cases-11-03-20.json'),
+    ])
+    setWorldData(worldResponse.data)
+    setUsaData(usaResponse.data)
   }
 
   return (
     <>
-      <StyledLabel>Confirmed cases worldwide</StyledLabel>
-      <MapChart countries={countries} />
+      <SectionLabel>Confirmed cases globally</SectionLabel>
+      <MapChart
+        type="WORLD"
+        data={worldData}
+        source={SOURCE.WHO}
+        updatedAt={createDate('10-03-20')}
+      />
 
-      <StyledLabel>Situation in numbers</StyledLabel>
+      <SectionLabel>Confirmed cases in the USA</SectionLabel>
+      <MapChart
+        type="USA"
+        data={usaData}
+        source={`${SOURCE.CDC}, ${SOURCE.CNN}`}
+        updatedAt={createDate('11-03-20')}
+      />
+
+      <SectionLabel>Global situation in numbers</SectionLabel>
       <Stats />
     </>
   )
 }
-
-const StyledLabel = styled.h3`
-  font-size: 18px;
-  margin-bottom: 24px;
-  margin-top: 80px;
-
-  @media (max-width: ${BP.MOBILE}) {
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-`

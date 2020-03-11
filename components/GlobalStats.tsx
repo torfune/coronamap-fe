@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import DataInfo from './DataInfo'
 import CountUp from 'react-countup'
-import { BP } from '../constants'
+import { BP, SOURCE } from '../constants'
 
-const Stats = () => (
+const GlobalStats = () => (
   <>
     <Container>
       <div>
@@ -27,7 +27,7 @@ const Stats = () => (
         </CountUp>
       </div>
     </Container>
-    <DataInfo updatedAt={new Date(2020, 2, 10)} />
+    <DataInfo source={SOURCE.WHO} updatedAt={new Date(2020, 2, 10)} />
   </>
 )
 
@@ -72,4 +72,4 @@ const Container = styled.div`
   }
 `
 
-export default Stats
+export default GlobalStats

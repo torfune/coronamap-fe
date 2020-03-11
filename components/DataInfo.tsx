@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import { BP } from '../constants'
 
 interface Props {
+  source: string
   updatedAt: Date
 }
-const DataInfo: FC<Props> = ({ updatedAt }) => (
+const DataInfo: FC<Props> = ({ source, updatedAt }) => (
   <Container>
     <p>Updated: {updatedAt.toLocaleDateString()}</p>
     <span>|</span>
-    <p>Source: World Health Organization</p>
+    <p>Source: {source}</p>
   </Container>
 )
 
