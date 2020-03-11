@@ -7,21 +7,21 @@ const GlobalStats = () => (
   <>
     <Container>
       <div>
-        <h4>TOTAL CASES</h4>
+        <h3>CONFIRMED CASES</h3>
         <CountUp end={113702} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
 
       <div>
-        <h4>DEATHS</h4>
+        <h3>DEATHS</h3>
         <CountUp end={4012} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
 
       <div>
-        <h4>RECOVERED</h4>
+        <h3>RECOVERED</h3>
         <CountUp end={65105} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
@@ -38,7 +38,7 @@ const Container = styled.div`
   div {
     margin-right: 96px;
 
-    h4 {
+    h3 {
       font-size: 18px;
       letter-spacing: 2px;
       color: #888;
@@ -57,7 +57,7 @@ const Container = styled.div`
       margin-top: 8px;
       margin-bottom: 16px;
 
-      h4 {
+      h3 {
         font-size: 16px;
       }
 

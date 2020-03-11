@@ -37,7 +37,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Coronavirus visualized | World Map | USA Map</title>
+          <title>Coronavirus Interactive Map | World Map | Map of USA</title>
           <meta
             name="description"
             content="Latest Coronavirus data visualized on interactive map."

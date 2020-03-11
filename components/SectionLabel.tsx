@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { BP } from '../constants'
 
-const SectionLabel = styled.h3`
+const SectionLabel = styled.h2`
   font-size: 18px;
   margin-bottom: 24px;
   margin-top: 80px;
