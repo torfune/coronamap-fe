@@ -37,11 +37,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Coronavirus Interactive Map | World Map | Map of USA</title>
-          <meta
-            name="description"
-            content="Latest Coronavirus data visualized on interactive map."
-          ></meta>
           <link rel="icon" href="favicon-32.png" type="image/x-icon"></link>
           <link
             href="https://fonts.googleapis.com/css?family=Roboto+Mono"

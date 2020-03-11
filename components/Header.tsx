@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { BP } from '../constants'
 import Link from 'next/link'
+import Navigation from './Navigation'
 
 const Header = () => (
   <Container>
@@ -10,6 +11,8 @@ const Header = () => (
         <h1>CoronaMap.app</h1>
       </a>
     </Link>
+
+    <Navigation />
   </Container>
 )
 
@@ -20,35 +23,39 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 10;
   opacity: 0.9;
 
-  a {
+  > a {
     display: flex;
     text-decoration: none;
     align-items: center;
     color: #fff;
   }
 
-  img {
+  > a > img {
     height: 40px;
   }
 
-  h1 {
+  > a > h1 {
     margin-left: 16px;
     font-size: 24px;
     letter-spacing: 2px;
   }
 
   @media (max-width: ${BP.MOBILE}) {
-    padding: 20px 24px;
+    height: 58px;
+    padding: 0 24px;
+    opacity: 0.94;
 
-    img {
-      height: 32px;
+    > a > img {
+      height: 24px;
     }
 
-    h1 {
+    > a > h1 {
       margin-left: 12px;
+      font-size: 20px;
     }
   }
 `

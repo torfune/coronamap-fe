@@ -10,7 +10,7 @@ import ReactTooltip from 'react-tooltip'
 import shade from '../utils/shade'
 import ColorMap from '../types/ColorMap'
 import Data from '../types/Data'
-import getUSACode from '../utils/getUSACode'
+import getUsaCode from '../utils/getUsaCode'
 
 interface Props {
   type: 'WORLD' | 'USA'
@@ -59,7 +59,7 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
             geographies.map(geo => {
               const { properties: gdata } = geo
               const name = type === 'WORLD' ? gdata.NAME : gdata.name
-              const code = type === 'WORLD' ? gdata.ISO_A2 : getUSACode(name)
+              const code = type === 'WORLD' ? gdata.ISO_A2 : getUsaCode(name)
               const color = colorMap[code] || '#ffffff'
               const value = data[code]
 

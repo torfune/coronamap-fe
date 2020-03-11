@@ -2,9 +2,11 @@ import styled from 'styled-components'
 import DataInfo from './DataInfo'
 import CountUp from 'react-countup'
 import { BP, SOURCE } from '../constants'
+import SectionLabel from './SectionLabel'
 
 const GlobalStats = () => (
   <>
+    <SectionLabel>Global situation in numbers</SectionLabel>
     <Container>
       <div>
         <h3>CONFIRMED CASES</h3>
