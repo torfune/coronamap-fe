@@ -33,6 +33,11 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
+            <Link href="/europe">
+              <a>Europe</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/usa">
               <a>USA</a>
             </Link>
