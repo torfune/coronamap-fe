@@ -1,5 +1,5 @@
 import CasesMapWorld from '../components/CasesMapWorld'
-import GlobalStats from '../components/GlobalStats'
+import WorldStats from '../components/WorldStats'
 import CasesMapUsa from '../components/CasesMapUsa'
 import Head from 'next/head'
 
@@ -13,7 +13,7 @@ export default () => (
       ></meta>
     </Head>
 
-    <GlobalStats />
+    <WorldStats />
     <CasesMapWorld />
     <CasesMapUsa />
   </>

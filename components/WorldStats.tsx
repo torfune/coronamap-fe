@@ -4,27 +4,27 @@ import CountUp from 'react-countup'
 import { BP, SOURCE } from '../constants'
 import SectionLabel from './SectionLabel'
 
-const GlobalStats = () => (
+const WorldStats = () => (
   <>
     <SectionLabel>Global situation in numbers</SectionLabel>
     <Container>
       <div>
         <h3>CONFIRMED CASES</h3>
-        <CountUp end={113702} duration={1} separator="," delay={0}>
+        <CountUp end={126623} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
 
       <div>
         <h3>DEATHS</h3>
-        <CountUp end={4012} duration={1} separator="," delay={0}>
+        <CountUp end={4638} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
 
       <div>
         <h3>RECOVERED</h3>
-        <CountUp end={65105} duration={1} separator="," delay={0}>
+        <CountUp end={68325} duration={1} separator="," delay={0}>
           {({ countUpRef }) => <p ref={countUpRef} />}
         </CountUp>
       </div>
@@ -74,4 +74,4 @@ const Container = styled.div`
   }
 `
 
-export default GlobalStats
+export default WorldStats
