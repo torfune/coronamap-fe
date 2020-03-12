@@ -2,7 +2,7 @@ import SectionLabel from './SectionLabel'
 import MapChart from './MapChart'
 import { SOURCE } from '../constants'
 import createDate from '../utils/createDate'
-import data from '../public/data/world/world-cases-10-03-20.json'
+import data from '../public/data/world/world-cases-11-03-20.json'
 
 const CasesMapWorld = () => (
   <>
@@ -11,7 +11,7 @@ const CasesMapWorld = () => (
       type="WORLD"
       data={data}
       source={SOURCE.WHO}
-      updatedAt={createDate('10-03-20')}
+      updatedAt={createDate('11-03-20')}
     />
   </>
 )
