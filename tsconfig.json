@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es2016", "esnext.asynciterable"],
+    "lib": ["DOM", "es2016", "esnext.asynciterable"],
     "target": "es5",
     "allowJs": true,
     "skipLibCheck": true,

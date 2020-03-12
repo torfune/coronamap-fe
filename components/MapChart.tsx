@@ -68,7 +68,8 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
                   key={geo.rsmKey}
                   geography={geo}
                   onMouseEnter={() => {
-                    setTooltip(`${name} - ${(value || 0).toLocaleString()}`)
+                    if (window.innerWidth > Number(BP.MOBILE.replace('px', '')))
+                      setTooltip(`${name} - ${(value || 0).toLocaleString()}`)
                   }}
                   onMouseLeave={() => {
                     setTooltip('')
