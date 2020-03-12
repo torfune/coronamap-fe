@@ -39,7 +39,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="favicon-32.png" type="image/x-icon"></link>
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+            href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
             rel="stylesheet"
           />
           <link rel="stylesheet" href="global.css" />
