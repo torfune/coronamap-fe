@@ -1,5 +1,6 @@
 import CasesMapWorld from '../components/CasesMapWorld'
 import Head from 'next/head'
+import _getStaticProps from '../_getStaticProps'
 
 export default () => (
   <>
@@ -14,3 +15,5 @@ export default () => (
     <CasesMapWorld />
   </>
 )
+
+export const getStaticProps = _getStaticProps

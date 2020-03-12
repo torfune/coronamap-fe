@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import _getStaticProps from '../_getStaticProps'
 
 export default () => (
   <Container>
@@ -51,3 +52,5 @@ const Container = styled.div`
     margin-bottom: 16px;
   }
 `
+
+export const getStaticProps = _getStaticProps

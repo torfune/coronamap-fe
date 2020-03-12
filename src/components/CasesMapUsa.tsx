@@ -2,7 +2,7 @@ import SectionLabel from './SectionLabel'
 import MapChart from './MapChart'
 import { SOURCE } from '../constants'
 import createDate from '../utils/createDate'
-import data from '../public/data/usa/usa-cases-12-03-20.json'
+import data from '../data/usa/usa-cases-12-03-20.json'
 
 const CasesMapUsa = () => (
   <>
