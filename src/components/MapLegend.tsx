@@ -7,6 +7,10 @@ interface Props {
 }
 const MapLegend: FC<Props> = ({ breakpoints }) => (
   <Container>
+    <LegendItem color="#fff">
+      <div />
+      <p>None</p>
+    </LegendItem>
     <LegendItem color={COLOR.MAP_FILL[0]}>
       <div />
       <p>&lt;{breakpoints[0]}</p>
