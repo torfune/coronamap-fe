@@ -3,6 +3,7 @@ import WorldStats from '../components/WorldStats'
 import CasesMapUsa from '../components/CasesMapUsa'
 import Head from 'next/head'
 import _getStaticProps from '../_getStaticProps'
+import CasesMapEurope from '../components/CasesMapEurope'
 
 export default () => (
   <>
@@ -17,6 +18,7 @@ export default () => (
     <WorldStats />
     <CasesMapWorld />
     <CasesMapUsa />
+    <CasesMapEurope />
   </>
 )
 

@@ -12,8 +12,9 @@ import ColorMap from '../types/ColorMap'
 import Data from '../types/Data'
 import getUsaCode from '../utils/getUsaCode'
 
+type Type = 'WORLD' | 'USA' | 'EUROPE'
 interface Props {
-  type: 'WORLD' | 'USA'
+  type: Type
   data: Data
   source: string
   updatedAt: Date
@@ -25,7 +26,7 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
 
   useEffect(() => {
     const values = Object.values(data)
-    if (type === 'WORLD') {
+    if (type === 'WORLD' || type === 'EUROPE') {
       values.shift()
     }
 
@@ -51,15 +52,19 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
       <ComposableMap
         data-tip=""
         data-background-color="#333"
-        viewBox={type === 'WORLD' ? '40 70 800 412' : '0 55 800 500'}
-        projection={type === 'USA' ? 'geoAlbersUsa' : 'geoEqualEarth'}
+        viewBox={getViewBox(type)}
+        projection={getProjection(type)}
+        projectionConfig={type === 'EUROPE' ? {
+          rotate: [-20.0, -52.0, 0],
+          scale: 700
+        } : {}}
       >
-        <Geographies geography={type === 'WORLD' ? GEO_URL.WORLD : GEO_URL.USA}>
+        <Geographies geography={getMapUrl(type)}>
           {({ geographies }: { geographies: GeoData[] }) =>
             geographies.map(geo => {
               const { properties: gdata } = geo
-              const name = type === 'WORLD' ? gdata.NAME : gdata.name
-              const code = type === 'WORLD' ? gdata.ISO_A2 : getUsaCode(name)
+              const name = type === 'USA' ? gdata.name : gdata.NAME
+              const code = type === 'USA' ? getUsaCode(name) : gdata.ISO_A2
               const color = colorMap[code] || '#ffffff'
               const value = data[code]
 
@@ -100,6 +105,39 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
       <ReactTooltip>{tooltip}</ReactTooltip>
     </>
   )
+}
+
+const getMapUrl = (type: Type) => {
+  switch (type) {
+    case 'WORLD':
+      return GEO_URL.WORLD
+    case 'USA':
+      return GEO_URL.USA
+    case 'EUROPE':
+      return GEO_URL.EUROPE
+  }
+}
+
+const getProjection = (type: Type) => {
+  switch (type) {
+    case 'WORLD':
+      return 'geoEqualEarth'
+    case 'USA':
+      return 'geoAlbersUsa'
+    case 'EUROPE':
+      return 'geoAzimuthalEqualArea'
+  }
+}
+
+const getViewBox = (type: Type) => {
+  switch (type) {
+    case 'WORLD':
+      return '40 70 800 412'
+    case 'USA':
+      return '0 55 800 500'
+    case 'EUROPE':
+      return '110 50 465 475'
+  }
 }
 
 const StyledGeography = styled(Geography)`
