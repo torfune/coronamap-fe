@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-import DataInfo from './DataInfo'
-import CountUp from 'react-countup'
-import { BP, SOURCE } from '../constants'
+import { BP } from '../constants'
 import SectionLabel from './SectionLabel'
+
+const CONFIRMED_CASES = 134087
+const DEATHS = 4964
+const RECOVERED = 68898
 
 const WorldStats = () => (
   <>
@@ -10,26 +12,19 @@ const WorldStats = () => (
     <Container>
       <div>
         <h3>CONFIRMED CASES</h3>
-        <CountUp end={126623} duration={1} separator="," delay={0}>
-          {({ countUpRef }) => <p ref={countUpRef} />}
-        </CountUp>
+        <p>{CONFIRMED_CASES.toLocaleString()}</p>
       </div>
 
       <div>
         <h3>DEATHS</h3>
-        <CountUp end={4638} duration={1} separator="," delay={0}>
-          {({ countUpRef }) => <p ref={countUpRef} />}
-        </CountUp>
+        <p>{DEATHS.toLocaleString()}</p>
       </div>
 
       <div>
         <h3>RECOVERED</h3>
-        <CountUp end={68325} duration={1} separator="," delay={0}>
-          {({ countUpRef }) => <p ref={countUpRef} />}
-        </CountUp>
+        <p>{RECOVERED.toLocaleString()}</p>
       </div>
     </Container>
-    <DataInfo source={SOURCE.WHO} updatedAt={new Date(2020, 2, 10)} />
   </>
 )
 
