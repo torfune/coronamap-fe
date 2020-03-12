@@ -5,23 +5,17 @@ import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 import GlobalContext from '../GlobalContext'
 
-export default ({ Component, pageProps }: AppProps) => {
-  if (!pageProps.worldCases) {
-    throw new Error('Missing worldCases in pageProps!')
-  }
+export default ({ Component, pageProps }: AppProps) => (
+  <GlobalContext.Provider value={{ worldCases: pageProps.worldCases }}>
+    <Header />
 
-  return (
-    <GlobalContext.Provider value={{ worldCases: pageProps.worldCases }}>
-      <Header />
+    <Content>
+      <Component {...pageProps} />
+    </Content>
 
-      <Content>
-        <Component {...pageProps} />
-      </Content>
-
-      <Footer />
-    </GlobalContext.Provider>
-  )
-}
+    <Footer />
+  </GlobalContext.Provider>
+)
 
 const Content = styled.div`
   padding: 48px 64px;
