@@ -10,6 +10,7 @@ export default ({ Component, pageProps }: AppProps) => (
     value={{
       worldCases: pageProps.worldCases,
       europeCases: pageProps.europeCases,
+      usaCases: pageProps.usaCases,
     }}
   >
     <Header />

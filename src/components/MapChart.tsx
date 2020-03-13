@@ -10,7 +10,7 @@ import ReactTooltip from 'react-tooltip'
 import shade from '../utils/shade'
 import ColorMap from '../types/ColorMap'
 import Data from '../types/Data'
-import getUsaCode from '../utils/getUsaCode'
+import getStateCode from '../utils/getStateCode'
 import getCountryCode from '../utils/getCountryCode'
 
 type Type = 'WORLD' | 'USA' | 'EUROPE'
@@ -51,7 +51,7 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
   }, [data])
 
   return (
-    <>
+    <div>
       <ComposableMap
         data-tip=""
         data-background-color="#333"
@@ -112,7 +112,7 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
       </BottomLine>
 
       <ReactTooltip>{tooltip}</ReactTooltip>
-    </>
+    </div>
   )
 }
 
@@ -152,7 +152,7 @@ const getViewBox = (type: Type) => {
 const getCode = (type: 'USA' | 'EUROPE', name: string) => {
   switch (type) {
     case 'USA':
-      return getUsaCode(name)
+      return getStateCode(name)
     case 'EUROPE':
       return getCountryCode(name)
   }

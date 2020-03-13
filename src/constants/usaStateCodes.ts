@@ -1,4 +1,4 @@
-const USA_STATE_CODES = {
+const USA_STATE_CODES: { [key: string]: string[] } = {
   AL: ['Alabama'],
   AK: ['Alaska'],
   AZ: ['Arizona'],
@@ -7,7 +7,7 @@ const USA_STATE_CODES = {
   CO: ['Colorado'],
   CT: ['Connecticut'],
   DE: ['Delaware'],
-  DC: ['District of Columbia', 'Washington D.C.'],
+  DC: ['Washington D.C.', 'District of Columbia'],
   FL: ['Florida'],
   GA: ['Georgia'],
   HI: ['Hawaii'],

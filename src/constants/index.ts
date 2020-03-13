@@ -7,6 +7,7 @@ export const COLOR = {
 
 export const BP = {
   MOBILE: '780px',
+  TABLE: '1050px',
 }
 
 export const SOURCE = {

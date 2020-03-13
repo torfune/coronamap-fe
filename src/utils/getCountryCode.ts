@@ -3,7 +3,9 @@ import COUNTRY_CODES from '../constants/countryCodes'
 const entries = Object.entries(COUNTRY_CODES)
 
 const getCountryCode = (name: string) => {
-  const country = entries.find(e => e[1].includes(name.toLowerCase()))
+  const country = entries.find(([_, names]) =>
+    names.map(n => n.toLowerCase()).includes(name.toLowerCase())
+  )
   return country ? country[0] : ''
 }
 
