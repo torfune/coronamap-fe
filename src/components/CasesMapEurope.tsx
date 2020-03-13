@@ -5,14 +5,14 @@ import createDate from '../utils/createDate'
 import { useGlobalContext } from '../GlobalContext'
 
 const CasesMapEurope = () => {
-  const { worldCases } = useGlobalContext()
+  const { europeCases } = useGlobalContext()
 
   return (
     <>
       <SectionLabel>Map of confirmed cases in Europe</SectionLabel>
       <MapChart
         type="EUROPE"
-        data={worldCases}
+        data={europeCases}
         source={`${SOURCE.WHO}, ${SOURCE.ECDC}`}
         updatedAt={createDate('12-03-20')}
       />

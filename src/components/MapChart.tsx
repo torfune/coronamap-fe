@@ -11,6 +11,7 @@ import shade from '../utils/shade'
 import ColorMap from '../types/ColorMap'
 import Data from '../types/Data'
 import getUsaCode from '../utils/getUsaCode'
+import getCountryCode from '../utils/getCountryCode'
 
 type Type = 'WORLD' | 'USA' | 'EUROPE'
 interface Props {
@@ -26,7 +27,9 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
 
   useEffect(() => {
     const values = Object.values(data)
-    if (type === 'WORLD' || type === 'EUROPE') {
+
+    // Remove China
+    if (type === 'WORLD') {
       values.shift()
     }
 
@@ -68,7 +71,7 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
             geographies.map(geo => {
               const { properties: gdata } = geo
               const name = type === 'USA' ? gdata.name : gdata.NAME
-              const code = type === 'USA' ? getUsaCode(name) : gdata.ISO_A2
+              const code = type === 'WORLD' ? gdata.ISO_A2 : getCode(type, name)
               const color = colorMap[code] || '#ffffff'
               const value = data[code]
 
@@ -142,7 +145,16 @@ const getViewBox = (type: Type) => {
     case 'USA':
       return '0 55 800 500'
     case 'EUROPE':
-      return '110 50 465 475'
+      return '120 60 440 450'
+  }
+}
+
+const getCode = (type: 'USA' | 'EUROPE', name: string) => {
+  switch (type) {
+    case 'USA':
+      return getUsaCode(name)
+    case 'EUROPE':
+      return getCountryCode(name)
   }
 }
 

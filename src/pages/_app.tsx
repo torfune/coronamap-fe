@@ -6,7 +6,12 @@ import { AppProps } from 'next/app'
 import GlobalContext from '../GlobalContext'
 
 export default ({ Component, pageProps }: AppProps) => (
-  <GlobalContext.Provider value={{ worldCases: pageProps.worldCases }}>
+  <GlobalContext.Provider
+    value={{
+      worldCases: pageProps.worldCases,
+      europeCases: pageProps.europeCases,
+    }}
+  >
     <Header />
 
     <Content>

@@ -23,5 +23,5 @@ export const GEO_URL = {
   WORLD:
     'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json',
   EUROPE:
-    'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json',
+    'https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson',
 }
