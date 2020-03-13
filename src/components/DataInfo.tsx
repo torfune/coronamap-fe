@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import { BP } from '../constants'
+import { BP, LOCALE } from '../constants'
 
 interface Props {
   source: string
@@ -8,7 +8,7 @@ interface Props {
 }
 const DataInfo: FC<Props> = ({ source, updatedAt }) => (
   <Container>
-    <p>Updated: {updatedAt.toLocaleDateString()}</p>
+    <p>Updated: {updatedAt.toLocaleDateString(LOCALE)}</p>
     <span>|</span>
     <p>Source: {source}</p>
   </Container>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLOR, BP } from '../constants'
+import { COLOR, BP, LOCALE } from '../constants'
 import { FC } from 'react'
 
 interface Props {
@@ -18,7 +18,7 @@ const MapLegend: FC<Props> = ({ breakpoints }) => (
     {breakpoints.map((value, index) => (
       <LegendItem key={index} color={COLOR.MAP_FILL[index + 1]}>
         <div />
-        <p>{value.toLocaleString()}+</p>
+        <p>{value.toLocaleString(LOCALE)}+</p>
       </LegendItem>
     ))}
   </Container>

@@ -3,7 +3,7 @@ import GeoData from '../types/GeoData'
 import { Geography, ComposableMap, Geographies } from 'react-simple-maps'
 import styled from 'styled-components'
 import getFourChunks from '../utils/getFourChunks'
-import { COLOR, GEO_URL, BP } from '../constants'
+import { COLOR, GEO_URL, BP, LOCALE } from '../constants'
 import MapLegend from './MapLegend'
 import DataInfo from './DataInfo'
 import ReactTooltip from 'react-tooltip'
@@ -54,10 +54,14 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
         data-background-color="#333"
         viewBox={getViewBox(type)}
         projection={getProjection(type)}
-        projectionConfig={type === 'EUROPE' ? {
-          rotate: [-20.0, -52.0, 0],
-          scale: 700
-        } : {}}
+        projectionConfig={
+          type === 'EUROPE'
+            ? {
+                rotate: [-20.0, -52.0, 0],
+                scale: 700,
+              }
+            : {}
+        }
       >
         <Geographies geography={getMapUrl(type)}>
           {({ geographies }: { geographies: GeoData[] }) =>
@@ -74,7 +78,9 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
                   geography={geo}
                   onMouseEnter={() => {
                     if (window.innerWidth > Number(BP.MOBILE.replace('px', '')))
-                      setTooltip(`${name} - ${(value || 0).toLocaleString()}`)
+                      setTooltip(
+                        `${name} - ${(value || 0).toLocaleString(LOCALE)}`
+                      )
                   }}
                   onMouseLeave={() => {
                     setTooltip('')

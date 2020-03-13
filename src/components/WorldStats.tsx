@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { BP } from '../constants'
+import { BP, LOCALE } from '../constants'
 import SectionLabel from './SectionLabel'
 
 const CONFIRMED_CASES = 134087
@@ -12,17 +12,17 @@ const WorldStats = () => (
     <Container>
       <div>
         <h3>CONFIRMED CASES</h3>
-        <p>{CONFIRMED_CASES.toLocaleString()}</p>
+        <p>{CONFIRMED_CASES.toLocaleString(LOCALE)}</p>
       </div>
 
       <div>
         <h3>DEATHS</h3>
-        <p>{DEATHS.toLocaleString()}</p>
+        <p>{DEATHS.toLocaleString(LOCALE)}</p>
       </div>
 
       <div>
         <h3>RECOVERED</h3>
-        <p>{RECOVERED.toLocaleString()}</p>
+        <p>{RECOVERED.toLocaleString(LOCALE)}</p>
       </div>
     </Container>
   </>
