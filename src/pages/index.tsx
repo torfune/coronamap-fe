@@ -6,6 +6,7 @@ import CasesMapEurope from '../components/CasesMapEurope'
 import { useGlobalContext } from '../GlobalContext'
 import SectionLabel from '../components/SectionLabel'
 import PageHead from '../components/PageHead'
+import BarChart from '../components/BarChart'
 
 export default () => {
   const { worldCases, europeCases, usaCases } = useGlobalContext()
@@ -21,6 +22,7 @@ export default () => {
 
       <SectionLabel>Global map of confirmed cases</SectionLabel>
       <CasesMapWorld data={worldCases} />
+      <BarChart data={worldCases} />
 
       <SectionLabel>Map of confirmed cases in the USA</SectionLabel>
       <CasesMapUsa data={usaCases} />
