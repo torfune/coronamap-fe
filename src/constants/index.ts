@@ -10,6 +10,14 @@ export const BP = {
   TABLE: '1050px',
 }
 
+export const Z_INDEX = {
+  DEFAULT: 0,
+  HEADER: 1,
+  BACKDROP: 2,
+  NAVIGATION: 3,
+  MODAL: 3,
+}
+
 export const SOURCE = {
   WHO: 'WHO',
   CDC: 'CDC',

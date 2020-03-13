@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { BP } from '../constants'
+import { BP, Z_INDEX } from '../constants'
 import Link from 'next/link'
 import Navigation from './Navigation'
 
@@ -24,7 +24,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: ${Z_INDEX.HEADER};
   opacity: 0.9;
 
   > a {

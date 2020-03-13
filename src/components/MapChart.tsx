@@ -12,6 +12,8 @@ import ColorMap from '../types/ColorMap'
 import Data from '../types/Data'
 import getStateCode from '../utils/getStateCode'
 import getCountryCode from '../utils/getCountryCode'
+import Modal from './Modal'
+import ModalData from '../types/ModalData'
 
 type Type = 'WORLD' | 'USA' | 'EUROPE'
 interface Props {
@@ -24,6 +26,12 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
   const [tooltip, setTooltip] = useState('')
   const [breakpoints, setBreakpoints] = useState<number[]>([])
   const [colorMap, setColorMap] = useState<ColorMap>({})
+  const [modal, setModal] = useState<ModalData | null>(null)
+  const [mobile, setMobile] = useState(true)
+
+  useEffect(() => {
+    setMobile(window.innerWidth <= Number(BP.MOBILE.replace('px', '')))
+  }, [])
 
   useEffect(() => {
     const values = Object.values(data)
@@ -73,17 +81,19 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
               const name = type === 'USA' ? gdata.name : gdata.NAME
               const code = type === 'WORLD' ? gdata.ISO_A2 : getCode(type, name)
               const color = colorMap[code] || '#ffffff'
-              const value = data[code]
+              const value = (data[code] || 0).toLocaleString(LOCALE)
 
               return (
                 <StyledGeography
                   key={geo.rsmKey}
                   geography={geo}
+                  onMouseUp={() => {
+                    if (!mobile) return
+                    setModal({ title: name, value })
+                  }}
                   onMouseEnter={() => {
-                    if (window.innerWidth > Number(BP.MOBILE.replace('px', '')))
-                      setTooltip(
-                        `${name} - ${(value || 0).toLocaleString(LOCALE)}`
-                      )
+                    if (mobile) return
+                    setTooltip(`${name} - ${value}`)
                   }}
                   onMouseLeave={() => {
                     setTooltip('')
@@ -111,7 +121,8 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
         <MapLegend breakpoints={breakpoints} />
       </BottomLine>
 
-      <ReactTooltip>{tooltip}</ReactTooltip>
+      {modal && <Modal data={modal} onClose={() => setModal(null)} />}
+      {!mobile && <ReactTooltip>{tooltip}</ReactTooltip>}
     </div>
   )
 }

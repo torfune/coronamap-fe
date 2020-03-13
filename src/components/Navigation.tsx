@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import { COLOR, BP } from '../constants'
+import { COLOR, BP, Z_INDEX } from '../constants'
 import { useState, useEffect } from 'react'
 import Burger from './Burger'
 import { useRouter } from 'next/router'
+import Backdrop from './Backdrop'
 
 const Navigation = () => {
   const router = useRouter()
@@ -18,7 +19,7 @@ const Navigation = () => {
       <Burger onClick={() => setOpened(true)} />
       <Container opened={opened}>
         <CrossButton onClick={() => setOpened(false)}>
-          <img src="/icons/cancel.svg" />
+          <img src="/icons/cross.svg" />
         </CrossButton>
 
         <ul>
@@ -83,7 +84,7 @@ const Container = styled.div<{ opened: boolean }>`
 
   @media (max-width: ${BP.MOBILE}) {
     position: fixed;
-    z-index: 2;
+    z-index: ${Z_INDEX.NAVIGATION};
     top: 0;
     width: 200px;
     height: 100vh;
@@ -115,16 +116,6 @@ const Container = styled.div<{ opened: boolean }>`
       width: 100%;
     }
   }
-`
-const Backdrop = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: 100vh;
-  z-index: 1;
-  background: #000;
-  opacity: 0.6;
 `
 const CrossButton = styled.div`
   @media (min-width: ${BP.MOBILE}) {
