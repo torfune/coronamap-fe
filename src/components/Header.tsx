@@ -7,7 +7,7 @@ const Header = () => (
   <Container>
     <Link href="/">
       <a>
-        <img src="logo.svg" />
+        <img src="icons/logo.svg" />
         <h1>CoronaMap.app</h1>
       </a>
     </Link>

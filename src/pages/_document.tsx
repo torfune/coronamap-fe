@@ -37,7 +37,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="favicon-32.png" type="image/x-icon"></link>
+          <link rel="icon" href="favicon.png" type="image/x-icon"></link>
           <link
             href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
             rel="stylesheet"

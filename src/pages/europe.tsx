@@ -12,7 +12,7 @@ export default () => {
   return (
     <>
       <Head>
-        <title>Coronavirus | Europe Interactive Map</title>
+        <title>Coronavirus | Europe Interactive Map | Updated</title>
         <meta
           name="description"
           content="Confirmed cases of Coronavirus in Europe visualized on the map."
