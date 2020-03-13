@@ -7,8 +7,9 @@ import CasesMapEurope from '../components/CasesMapEurope'
 import { useGlobalContext } from '../GlobalContext'
 import SectionLabel from '../components/SectionLabel'
 
-const title = 'Coronavirus Visualized | Updated Maps and Numbers'
-const description = 'Latest Coronavirus stats visualized on interactive maps.'
+const title = 'Interactive Coronavirus Maps | Coronavirus Statistics | Updated'
+const description =
+  'Latest Coronavirus numbers visualized on interactive maps and data tables.'
 const image = 'https://coronamap.app/images/og-image.png'
 
 export default () => {
