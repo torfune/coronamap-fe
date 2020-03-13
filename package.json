@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/cvetkovicovaKatarina/koronavirus-fe#readme",
   "dependencies": {
+    "@sentry/browser": "^5.14.2",
     "next": "^9.3.0",
+    "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-simple-maps": "^1.0.0-beta.0",
     "react-tooltip": "^4.1.0",
-    "react": "^16.13.0",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {

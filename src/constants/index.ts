@@ -26,3 +26,6 @@ export const GEO_URL = {
   EUROPE:
     'https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson',
 }
+
+export const SENTRY_ID =
+  'https://bc2d1f8a79bc4cef8944e6faaa8cffa6@sentry.io/4595723'
