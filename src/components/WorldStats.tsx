@@ -32,17 +32,22 @@ const Container = styled.div`
   display: flex;
   margin-bottom: 16px;
 
-  div {
+  > div {
     margin-right: 96px;
 
-    h3 {
+    > h3 {
       font-size: 18px;
       letter-spacing: 2px;
       color: #888;
+      white-space: nowrap;
     }
 
-    p {
+    > p {
       font-size: 40px;
+    }
+
+    :last-child {
+      margin-right: 0;
     }
   }
 
@@ -50,15 +55,15 @@ const Container = styled.div`
     flex-direction: column;
     margin-bottom: 0;
 
-    div {
+    > div {
       margin-top: 8px;
       margin-bottom: 16px;
 
-      h3 {
-        font-size: 16px;
+      > h3 {
+        font-size: 14px;
       }
 
-      p {
+      > p {
         font-size: 32px;
       }
 

@@ -6,14 +6,14 @@ export const COLOR = {
 }
 
 export const BP = {
-  MOBILE: '576px',
+  MOBILE: '780px',
 }
 
 export const SOURCE = {
-  WHO: 'World Health Organization',
-  CDC: 'Centers for Disease Control and Prevention',
+  WHO: 'WHO',
+  CDC: 'CDC',
   CNN: 'CNN',
-  ECDC: 'European Centre for Disease Prevention and Control',
+  ECDC: 'ECDC',
 }
 
 export const LOCALE = 'en-US'
