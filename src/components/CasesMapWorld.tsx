@@ -12,7 +12,7 @@ const CasesMapWorld: FC<Props> = ({ data }) => (
     type="WORLD"
     data={data}
     source={SOURCE.WHO}
-    updatedAt={createDate('12-03-20')}
+    updatedAt={createDate('13-03-20')}
   />
 )
 

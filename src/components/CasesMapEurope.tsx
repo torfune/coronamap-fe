@@ -12,7 +12,7 @@ const CasesMapEurope: FC<Props> = ({ data }) => (
     type="EUROPE"
     data={data}
     source={`${SOURCE.WHO}, ${SOURCE.ECDC}`}
-    updatedAt={createDate('12-03-20')}
+    updatedAt={createDate('13-03-20')}
   />
 )
 
