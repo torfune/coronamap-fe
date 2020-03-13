@@ -8,7 +8,7 @@ const Header = () => (
     <Link href="/">
       <a>
         <img src="icons/logo.svg" />
-        <h1>CoronaMap.app</h1>
+        <h1>Coronavirus Interactive Map</h1>
       </a>
     </Link>
 

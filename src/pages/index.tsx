@@ -1,33 +1,21 @@
 import CasesMapWorld from '../components/CasesMapWorld'
 import WorldStats from '../components/WorldStats'
 import CasesMapUsa from '../components/CasesMapUsa'
-import Head from 'next/head'
 import _getStaticProps from '../_getStaticProps'
 import CasesMapEurope from '../components/CasesMapEurope'
 import { useGlobalContext } from '../GlobalContext'
 import SectionLabel from '../components/SectionLabel'
-
-const title = 'Interactive Coronavirus Maps | Coronavirus Statistics | Updated'
-const description =
-  'Latest Coronavirus numbers visualized on interactive maps and data tables.'
-const image = 'https://coronamap.app/images/og-image.png'
+import PageHead from '../components/PageHead'
 
 export default () => {
   const { worldCases, europeCases, usaCases } = useGlobalContext()
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="https://coronamap.app" />
-        <meta property="og:image" content={image} />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="1200" />
-        <meta property="og:image:alt" content="Coronavirus World Map" />
-      </Head>
+      <PageHead
+        title="Interactive Coronavirus Maps | Coronavirus Statistics | Updated"
+        description="Latest Coronavirus numbers visualized using interactive maps and tables"
+      />
 
       <WorldStats />
 

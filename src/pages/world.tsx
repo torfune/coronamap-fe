@@ -1,23 +1,20 @@
 import CasesMapWorld from '../components/CasesMapWorld'
-import Head from 'next/head'
 import _getStaticProps from '../_getStaticProps'
 import SectionLabel from '../components/SectionLabel'
 import { useGlobalContext } from '../GlobalContext'
 import DataTable from '../components/DataTable'
 import MapTableWrapper from '../components/MapTableWrapper'
+import PageHead from '../components/PageHead'
 
 export default () => {
   const { worldCases } = useGlobalContext()
 
   return (
     <>
-      <Head>
-        <title>Coronavirus | World Interactive Map | Updated</title>
-        <meta
-          name="description"
-          content="All confirmed cases of Coronavirus visualized on the map."
-        />
-      </Head>
+      <PageHead
+        title="Coronavirus | World Interactive Map | Updated"
+        description="All confirmed cases of Coronavirus visualized on the interactive map"
+      />
 
       <SectionLabel>Global map of confirmed cases</SectionLabel>
       <MapTableWrapper>
