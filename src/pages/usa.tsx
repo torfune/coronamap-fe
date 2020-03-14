@@ -5,6 +5,7 @@ import SectionLabel from '../components/SectionLabel'
 import DataTable from '../components/DataTable'
 import MapTableWrapper from '../components/MapTableWrapper'
 import PageHead from '../components/PageHead'
+import BarChart from '../components/BarChart'
 
 export default () => {
   const { usaCases } = useGlobalContext()
@@ -19,7 +20,10 @@ export default () => {
       <SectionLabel>Global map of confirmed cases</SectionLabel>
       <MapTableWrapper>
         <DataTable data={usaCases} usa />
-        <CasesMapUsa data={usaCases} />
+        <div>
+          <CasesMapUsa data={usaCases} />
+          <BarChart data={usaCases} usa />
+        </div>
       </MapTableWrapper>
     </>
   )
