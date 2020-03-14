@@ -1,3 +1,9 @@
+export const UPDATED_AT = {
+  USA: '14-03-20',
+  WORLD: '14-03-20',
+  EUROPE: '14-03-20',
+}
+
 export const COLOR = {
   MAP_FILL: ['#FFE7A7', '#fbc531', '#f39c12', '#e84118'],
   MAP_CHINA: '#400C00',
