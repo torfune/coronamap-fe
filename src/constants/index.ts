@@ -1,7 +1,7 @@
 export const UPDATED_AT = {
-  USA: '15-03-20',
-  WORLD: '15-03-20',
-  EUROPE: '15-03-20',
+  USA: '16-03-20',
+  WORLD: '16-03-20',
+  EUROPE: '16-03-20',
 }
 
 export const COLOR = {
