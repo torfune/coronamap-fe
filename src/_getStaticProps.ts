@@ -1,6 +1,6 @@
 import whoCases from './data/who/world-cases-12-03-20.json'
-import ecdcCases from './data/ecdc/world-cases-16-03-20.json'
-import cnnCases from './data/cnn/usa-cases-16-03-20.json'
+import ecdcCases from './data/ecdc/world-cases-17-03-20.json'
+import cnnCases from './data/cnn/usa-cases-17-03-20.json'
 import Data from './types/Data'
 import COUNTRY_CONTINENT from './constants/countryContinent'
 

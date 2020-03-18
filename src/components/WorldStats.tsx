@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { BP, LOCALE } from '../constants'
 import SectionLabel from './SectionLabel'
 
-const CONFIRMED_CASES = 157848
-const DEATHS = 5846
-const RECOVERED = 75954
+const CONFIRMED_CASES = 199475
+const DEATHS = 8009
+const RECOVERED = 82802
 
 const WorldStats = () => (
   <>
