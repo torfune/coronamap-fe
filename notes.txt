@@ -1,4 +1,0 @@
-Map
-
-getInitialProps -> Geographic data
-onMount         -> Country data

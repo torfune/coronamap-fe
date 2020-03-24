@@ -1,24 +1,13 @@
 {
   "name": "coronamap-fe",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "node deploy.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cvetkovicovaKatarina/koronavirus-fe.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cvetkovicovaKatarina/koronavirus-fe/issues"
-  },
-  "homepage": "https://github.com/cvetkovicovaKatarina/koronavirus-fe#readme",
   "dependencies": {
     "@sentry/browser": "^5.14.2",
     "chart.js": "^2.9.3",

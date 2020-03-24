@@ -1,18 +1,13 @@
-import whoCases from './data/who/world-cases-12-03-20.json'
-import ecdcCases from './data/ecdc/world-cases-18-03-20.json'
-import cnnCases from './data/cnn/usa-cases-18-03-20.json'
 import Data from './types/Data'
 import COUNTRY_CONTINENT from './constants/countryContinent'
+import worldCasesData from '../public/data/world-cases.json'
+import usaCasesData from '../public/data/usa-cases.json'
 
 const _getStaticProps = async () => {
-  const worldCases: Data = { ...whoCases }
-  for (const [code, value] of Object.entries(ecdcCases)) {
-    if (!worldCases[code] || value > worldCases[code]) {
-      worldCases[code] = value
-    }
-  }
-
+  const worldCases: Data = worldCasesData
+  const usaCases: Data = usaCasesData
   const europeCases: Data = {}
+
   for (const country in worldCases) {
     const continent = COUNTRY_CONTINENT[country]
     if (continent === 'EU') {
@@ -20,7 +15,7 @@ const _getStaticProps = async () => {
     }
   }
 
-  return { props: { worldCases, europeCases, usaCases: cnnCases } }
+  return { props: { worldCases, europeCases, usaCases } }
 }
 
 export default _getStaticProps
