@@ -20,7 +20,7 @@ if (!fs.existsSync(usaCasesFile)) {
   process.exit()
 }
 
-const child = spawn('now', ['--prod'])
+const child = spawn('now', ['--prod', '--confirm'])
 child.stdout.setEncoding('utf8')
 child.stdout.on('data', chunk => {
   console.log(chunk)
