@@ -3,9 +3,10 @@ import Data from '../types/Data'
 import { FC, useState, useEffect } from 'react'
 import { COLOR, LOCALE } from '../constants'
 import shade from '../utils/shade'
-import getStateName from '../utils/getStateName'
-import getCountryName from '../utils/getCountryName'
 import styled from 'styled-components'
+import countries from '../constants/countries'
+import states from '../constants/states'
+import getName from '../utils/getName'
 
 interface Props {
   data: Data
@@ -17,7 +18,7 @@ const BarChart: FC<Props> = ({ data, usa }) => {
   useEffect(() => {
     const sortedTopTen = Object.entries(data)
       .map(([code, value]) => ({
-        label: usa ? getStateName(code) : getCountryName(code),
+        label: usa ? getName(code, states) : getName(code, countries),
         value,
       }))
       .sort((a, b) => b.value - a.value)
@@ -68,7 +69,7 @@ const BarChart: FC<Props> = ({ data, usa }) => {
 
 const chartColors = COLOR.MAP_FILL.slice(1, 4)
   .reverse()
-  .concat(new Array(7).fill('#ffffff'))
+  .concat(new Array(7).fill('#FFE7A7'))
 
 const hoverChartColors: string[] = []
 for (const color of chartColors) {

@@ -10,10 +10,11 @@ import ReactTooltip from 'react-tooltip'
 import shade from '../utils/shade'
 import ColorMap from '../types/ColorMap'
 import Data from '../types/Data'
-import getStateCode from '../utils/getStateCode'
-import getCountryCode from '../utils/getCountryCode'
 import Modal from './Modal'
 import ModalData from '../types/ModalData'
+import states from '../constants/states'
+import getCode from '../utils/getCode'
+import countries from '../constants/countries'
 
 type Type = 'WORLD' | 'USA' | 'EUROPE'
 interface Props {
@@ -79,7 +80,8 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
             geographies.map(geo => {
               const { properties: gdata } = geo
               const name = type === 'USA' ? gdata.name : gdata.NAME
-              const code = type === 'WORLD' ? gdata.ISO_A2 : getCode(type, name)
+              const code =
+                type === 'WORLD' ? gdata.ISO_A2 : getCodeByType(type, name)
               const color = colorMap[code] || '#ffffff'
               const value = (data[code] || 0).toLocaleString(LOCALE)
 
@@ -160,12 +162,12 @@ const getViewBox = (type: Type) => {
   }
 }
 
-const getCode = (type: 'USA' | 'EUROPE', name: string) => {
+const getCodeByType = (type: 'USA' | 'EUROPE', name: string) => {
   switch (type) {
     case 'USA':
-      return getStateCode(name)
+      return getCode(name, states)
     case 'EUROPE':
-      return getCountryCode(name)
+      return getCode(name, countries)
   }
 }
 

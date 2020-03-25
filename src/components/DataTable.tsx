@@ -1,9 +1,10 @@
 import { FC } from 'react'
 import Data from '../types/Data'
 import styled from 'styled-components'
-import getCountryName from '../utils/getCountryName'
-import getStateName from '../utils/getStateName'
+import getName from '../utils/getName'
 import { LOCALE, BP } from '../constants'
+import countries from '../constants/countries'
+import states from '../constants/states'
 
 interface Props {
   data: Data
@@ -12,7 +13,7 @@ interface Props {
 const DataTable: FC<Props> = ({ data, usa }) => {
   const array = Object.entries(data)
     .map(([code, value]) => ({
-      label: usa ? getStateName(code) : getCountryName(code),
+      label: usa ? getName(code, states) : getName(code, countries),
       value,
     }))
     .sort((a, b) => b.value - a.value)
