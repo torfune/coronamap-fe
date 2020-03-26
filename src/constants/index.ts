@@ -1,9 +1,3 @@
-export const UPDATED_AT = {
-  USA: '25-03-20',
-  WORLD: '25-03-20',
-  EUROPE: '25-03-20',
-}
-
 export const COLOR = {
   MAP_FILL: ['#FFE7A7', '#fbc531', '#f39c12', '#e84118'],
   MAP_CHINA: '#400C00',
@@ -22,13 +16,6 @@ export const Z_INDEX = {
   BACKDROP: 2,
   NAVIGATION: 3,
   MODAL: 3,
-}
-
-export const SOURCE = {
-  WHO: 'WHO',
-  CDC: 'CDC',
-  CNN: 'CNN',
-  ECDC: 'ECDC',
 }
 
 export const LOCALE = 'en-US'

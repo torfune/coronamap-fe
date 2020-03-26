@@ -1,32 +1,34 @@
 import styled from 'styled-components'
 import { BP, LOCALE } from '../constants'
 import SectionLabel from './SectionLabel'
+import { useContext } from 'react'
+import GlobalContext from '../GlobalContext'
 
-const CONFIRMED_CASES = 446946
-const DEATHS = 19811
-const RECOVERED = 112058
+const WorldStats = () => {
+  const { summary } = useContext(GlobalContext)
 
-const WorldStats = () => (
-  <>
-    <SectionLabel>Global situation in numbers</SectionLabel>
-    <Container>
-      <div>
-        <h3>CONFIRMED CASES</h3>
-        <p>{CONFIRMED_CASES.toLocaleString(LOCALE)}</p>
-      </div>
+  return (
+    <>
+      <SectionLabel>Global situation in numbers</SectionLabel>
+      <Container>
+        <div>
+          <h3>CONFIRMED CASES</h3>
+          <p>{summary.totalCases.toLocaleString(LOCALE)}</p>
+        </div>
 
-      <div>
-        <h3>DEATHS</h3>
-        <p>{DEATHS.toLocaleString(LOCALE)}</p>
-      </div>
+        <div>
+          <h3>DEATHS</h3>
+          <p>{summary.totalDeaths.toLocaleString(LOCALE)}</p>
+        </div>
 
-      <div>
-        <h3>RECOVERED</h3>
-        <p>{RECOVERED.toLocaleString(LOCALE)}</p>
-      </div>
-    </Container>
-  </>
-)
+        <div>
+          <h3>RECOVERED</h3>
+          <p>{summary.totalRecovered.toLocaleString(LOCALE)}</p>
+        </div>
+      </Container>
+    </>
+  )
+}
 
 const Container = styled.div`
   display: flex;

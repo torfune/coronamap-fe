@@ -1,18 +1,22 @@
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 import styled from 'styled-components'
-import { BP, LOCALE } from '../constants'
+import { BP } from '../constants'
+import GlobalContext from '../GlobalContext'
 
 interface Props {
   source: string
-  updatedAt: Date
 }
-const DataInfo: FC<Props> = ({ source, updatedAt }) => (
-  <Container>
-    <p>Updated: {updatedAt.toLocaleDateString(LOCALE)}</p>
-    <span>|</span>
-    <p>Source: {source}</p>
-  </Container>
-)
+const DataInfo: FC<Props> = ({ source }) => {
+  const { summary } = useContext(GlobalContext)
+
+  return (
+    <Container>
+      <p>Last updated: {summary.updatedAt}</p>
+      <span>|</span>
+      <p>Source: {source}</p>
+    </Container>
+  )
+}
 
 const Container = styled.div`
   display: flex;

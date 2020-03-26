@@ -21,9 +21,8 @@ interface Props {
   type: Type
   data: Data
   source: string
-  updatedAt: Date
 }
-const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
+const MapChart: FC<Props> = ({ type, data, source }) => {
   const [tooltip, setTooltip] = useState('')
   const [breakpoints, setBreakpoints] = useState<number[]>([])
   const [colorMap, setColorMap] = useState<ColorMap>({})
@@ -119,7 +118,7 @@ const MapChart: FC<Props> = ({ type, data, source, updatedAt }) => {
       </ComposableMap>
 
       <BottomLine>
-        <DataInfo source={source} updatedAt={updatedAt} />
+        <DataInfo source={source} />
         <MapLegend breakpoints={breakpoints} />
       </BottomLine>
 

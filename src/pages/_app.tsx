@@ -21,6 +21,7 @@ export default ({ Component, pageProps }: AppProps) => {
         worldCases: pageProps.worldCases,
         europeCases: pageProps.europeCases,
         usaCases: pageProps.usaCases,
+        summary: pageProps.summary,
       }}
     >
       <Header />
