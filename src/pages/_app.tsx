@@ -38,6 +38,8 @@ export default ({ Component, pageProps }: AppProps) => {
 const Content = styled.div`
   padding: 48px 64px;
   min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
 
   @media (max-width: ${BP.MOBILE}) {
     padding: 24px 24px;
