@@ -36,11 +36,6 @@ const MapChart: FC<Props> = ({ type, data, source }) => {
   useEffect(() => {
     const values = Object.values(data)
 
-    // Remove China
-    if (type === 'WORLD') {
-      values.shift()
-    }
-
     const { chunks, breakpoints } = getFourChunks(values)
 
     const newColorMap: ColorMap =
