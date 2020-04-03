@@ -8,4 +8,4 @@ There is a second, private, repository for data management. I use it multiple ti
 
 ## Credits
 
-Designed and developed by Matej Strnad
+Designed and developed by Matej Strnad with little help of my girlfriend Katarina Cvetkovicova
