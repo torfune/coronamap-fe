@@ -1,3 +1,5 @@
+// THIS FILE IS ONLY INTENDED TO BE RUNNED BY 'coronamap-be' APPLICATION WHICH IS NOT PUBLICLY AVAILABLE
+
 const fs = require('fs')
 const { spawn } = require('child_process')
 
