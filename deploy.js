@@ -1,5 +1,3 @@
-// THIS FILE IS ONLY INTENDED TO BE RUNNED BY 'coronamap-be' APPLICATION WHICH IS NOT PUBLICLY AVAILABLE
-
 const fs = require('fs')
 const { spawn } = require('child_process')
 
@@ -23,7 +21,3 @@ if (!fs.existsSync(usaCasesFile)) {
 }
 
 const child = spawn('now', ['--prod', '--confirm'])
-child.stdout.setEncoding('utf8')
-child.stdout.on('data', chunk => {
-  console.log(chunk)
-})
