@@ -1,3 +1,5 @@
+> :warning: **Data are not being updated**
+
 ## Live demo
 
 <https://coronamap.app/>
